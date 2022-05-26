@@ -1,4 +1,4 @@
-package com.bstudio.androidtemplate.ui
+package com.bstudio.androidtemplate.ui.home_screen
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -9,7 +9,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 
-class MainViewModel(private val useCase: UserInfoUseCase): ViewModel() {
+class HomeViewModel(private val useCase: UserInfoUseCase): ViewModel() {
 
     private val _userInfo = MutableStateFlow<Response<UserInfoResponse>>(Response.loading())
     val userInfo = _userInfo.asStateFlow()

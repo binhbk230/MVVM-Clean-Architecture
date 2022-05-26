@@ -1,9 +1,9 @@
 package com.bstudio.androidtemplate.di
 
-import com.bstudio.androidtemplate.ui.MainViewModel
+import com.bstudio.androidtemplate.ui.home_screen.HomeViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
 val appModule = module {
-    viewModel { MainViewModel(get()) }
+    viewModel { HomeViewModel(get()) }
 }
