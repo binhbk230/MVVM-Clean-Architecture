@@ -1,6 +1,5 @@
 package com.bstudio.androidtemplate.ui.home_screen
 
-import android.util.Log
 import androidx.lifecycle.lifecycleScope
 import com.bstudio.androidtemplate.R
 import com.bstudio.androidtemplate.base.BaseFragment
@@ -29,7 +28,7 @@ class HomeFragment: BaseFragment<HomeFragmentBinding>(R.layout.home_fragment) {
 
     override fun initListener() {
         viewBinding.btnNext.setOnClickListener {
-            router.navigate(R.id.action_homeFragment_to_settingFragment)
+            navigate(R.id.action_homeFragment_to_settingFragment)
         }
     }
 

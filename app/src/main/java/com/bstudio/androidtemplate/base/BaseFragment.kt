@@ -12,7 +12,6 @@ import androidx.navigation.fragment.findNavController
 abstract class BaseFragment<VB: ViewDataBinding>(private val layoutId: Int): Fragment() {
 
     protected lateinit var viewBinding : VB
-    protected lateinit var router : BaseRouter
 
     abstract fun doOnViewCreated()
     abstract fun initListener()
@@ -32,10 +31,9 @@ abstract class BaseFragment<VB: ViewDataBinding>(private val layoutId: Int): Fra
         doOnViewCreated()
         initListener()
         initObserver()
-        initRouter()
     }
 
-    private fun initRouter() {
-        router = BaseRouter(findNavController())
+    protected fun navigate(destination: Int) {
+        findNavController().navigate(destination)
     }
 }
